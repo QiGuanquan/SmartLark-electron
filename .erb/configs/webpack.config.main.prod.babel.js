@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-12-23 10:29:27
+ * @LastEditTime: 2020-12-24 15:02:35
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \antd-pro-test\.erb\configs\webpack.config.main.prod.babel.js
+ */
 /**
  * Webpack config for production electron main process
  */
@@ -25,11 +33,11 @@ export default merge(baseConfig, {
 
   target: 'electron-main',
 
-  entry: './src/main.dev.ts',
+  entry: './app/main.dev.ts',
 
   output: {
     path: path.join(__dirname, '../../'),
-    filename: './src/main.prod.js',
+    filename: './app/main.prod.js',
   },
 
   optimization: {

@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-12-23 10:29:27
+ * @LastEditTime: 2020-12-24 15:02:27
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \antd-pro-test\.erb\configs\webpack.config.renderer.dev.dll.babel.js
+ */
 /**
  * Builds the DLL for development electron renderer process
  */
@@ -62,7 +70,7 @@ export default merge(baseConfig, {
     new webpack.LoaderOptionsPlugin({
       debug: true,
       options: {
-        context: path.join(__dirname, '../../src'),
+        context: path.join(__dirname, '../../app'),
         output: {
           path: path.join(__dirname, '../dll'),
         },

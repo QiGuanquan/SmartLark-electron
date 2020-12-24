@@ -1,10 +1,18 @@
+/*
+ * @Author: your name
+ * @Date: 2020-12-23 10:29:27
+ * @LastEditTime: 2020-12-24 15:02:53
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \antd-pro-test\.erb\configs\webpack.config.base.js
+ */
 /**
  * Base webpack config used across other specific configs
  */
 
 import path from 'path';
 import webpack from 'webpack';
-import { dependencies as externals } from '../../src/package.json';
+import { dependencies as externals } from '../../app/package.json';
 
 export default {
   externals: [...Object.keys(externals || {})],
@@ -25,7 +33,7 @@ export default {
   },
 
   output: {
-    path: path.join(__dirname, '../../src'),
+    path: path.join(__dirname, '../../app'),
     // https://github.com/webpack/webpack/issues/1114
     libraryTarget: 'commonjs2',
   },
@@ -35,7 +43,7 @@ export default {
    */
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
-    modules: [path.join(__dirname, '../src'), 'node_modules'],
+    modules: [path.join(__dirname, '../app'), 'node_modules'],
   },
 
   plugins: [
